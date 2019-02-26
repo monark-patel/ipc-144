@@ -1,0 +1,13 @@
+1)when passing an address to a function, it is passed by address.An array consists contains many numbers/characters and while calling a function it is better by address because an array can be changed later while using but having its location it is easy to call again and again without changing the values.
+
+2)the functions with an array parameter are usually complemented by an additional integer parameter because when calling that particular function we do not know the size of it thus adding an integer parameter its shows the size of the array making the calling function easy to work. 
+	for example in the program, the functions  
+		
+		void displayInventory(const struct Book book[],const int size);
+		int searchInventory(const struct Book book[],const int isbn,const int size);
+		void addBook(struct Book book[], int *size);
+		void checkPrice(const struct Book book[],const int size);
+		
+		have an integer parameter named size that defined the actual size of array book.
+		
+3)of the functions in this workshop specify "const" for the array parameters and not in others because all the other functions do not use a pointer thus making the values constant whereas some do not because a pointer can not be permanent.
